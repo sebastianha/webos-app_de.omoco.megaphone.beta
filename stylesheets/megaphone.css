@@ -1,0 +1,63 @@
+#display
+{
+	z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+	width:480px;
+	height:320px;
+	background-color:#000000;
+	display: none;
+	color:#ffffff;
+}
+
+#displaytext
+{
+	position: absolute;
+	bottom: 0;
+	width:480px;
+	height:320px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+#infotext
+{
+	z-index: 1001;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	width:480px;
+	height:25px;
+	display: none;
+	color:#333333;
+}
+
+#slavediv
+{
+	display:block;
+}
+
+#masterdiv
+{
+	display:none;
+}
+
+#spinner
+{
+	z-index: 1002;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+	width:320px;
+	height:480px;
+	background-color:#000000;
+	opacity: 0.85;
+	display: none;
+	color:#ffffff;
+}

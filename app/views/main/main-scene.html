@@ -1,0 +1,141 @@
+<!--
+MegaPhone - Display text over multiple phones
+Version 1.0.0 (14. Mar 2010)
+
+Copyright (C) 2010 Sebastian Hammerl (E-Mail: megaphone@omoco.de)
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 3 of
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, see <http://www.gnu.org/licenses/>.
+-->
+
+<div id="slavediv">
+	<button id='tomaster' class='palm-button negative'>To Master Control</button>
+	<table border=0 cellpadding=10><tr><td>Enter a channel name or select a channel around you from the list.</td></tr></table>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Channel</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="keys" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-row second" x-mojo-tap-highlight="momentary">
+		<div class="palm-row-wrapper">
+			<div id="channels_selector" x-mojo-element="ListSelector"></div>                                                   
+		</div>
+	</div>
+	<button id='refresh' class='palm-button'>Refresh Channels</button>
+	<button id='slave' class='palm-button'>Join Channel</button>
+</div>
+
+<div id="masterdiv">
+	<button id='toslave' class='palm-button negative'>To Slave Control</button>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Channel</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="key" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Visibility</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<table class="palm-list-section-label">
+						<tr>
+							<td>
+								<span x-mojo-loc="">Public:</span>		
+							</td>
+							<td>
+								<div id="publicToggle" x-mojo-element="ToggleButton" class="toggle-text"></div>
+							</td>	
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Text Color</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="textfgcolor" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Background Color</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="textbgcolor" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Text</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="text" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="palm-group">
+		<div class="palm-group-title" x-mojo-loc=''>Password</div>
+		<div class="palm-list">
+	   		<div class="palm-row single">
+				<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+					<div class="title">
+	      				<div id="pass" name="textField"  x-mojo-element="TextField"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="masterinfotext"></div>
+	<button id='master' class='palm-button'>Set Text</button>
+	<button id='reset' class='palm-button'>Reset all Phones</button>
+</div>
+
+<div id='display' align="center">
+	<div id="displaytext">
+				
+	</div>
+</div>
+
+<div id="spinner"><br><center><h2>Setting Text...</h2>Please Wait.</center><br><div x-mojo-element="Spinner" id="spinner1" style="margin:auto"></div></div>
+
+<div id="infotext"></div>

@@ -1,0 +1,9 @@
+{
+	"id": "de.omoco.megaphone.beta",
+	"version": "0.9.2",
+	"vendor": "megaphone.omoco.de",
+	"type": "web",
+	"main": "index.html",
+	"title": "MegaPhone",
+	"icon": "icon.png"
+}
